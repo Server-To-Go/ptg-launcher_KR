@@ -12,6 +12,19 @@ const semver                            = require('semver')
 const { pathToFileURL }                 = require('url')
 const { AZURE_CLIENT_ID, MSFT_OPCODE, MSFT_REPLY_TYPE, MSFT_ERROR, SHELL_OPCODE } = require('./app/assets/js/ipcconstants')
 
+/*              AutoLaunch Block                */
+const AutoLaunch = require('auto-launch');
+
+let autoLaunch = new AutoLaunch({
+    name: 'Pixelmon To Go Launcher',
+    path: app.getPath('exe'),
+});
+
+autoLaunch.isEnabled().then((isEnabled) => {
+    if (!isEnabled) autoLaunch.enable();
+});
+/*          End of AutoLaunch Block  
+
 // Setup auto updater.
 function initAutoUpdater(event, data) {
 
