@@ -37,9 +37,17 @@
     "tar-fs": "^2.1.1",
     "winreg": "^1.2.4"
   },
+  "build:": {
+    "afterSign": "electron-builder-notarize",
+    "mac": {
+      "hardenedRuntime": true
+    }
+  },
   "devDependencies": {
     "electron": "^20.1.1",
     "electron-builder": "^23.3.3",
+    "electron-builder-notarize": "^1.5.0",
+    "electron-notarize": "^1.2.1",
     "eslint": "^8.23.0"
   },
   "repository": {
