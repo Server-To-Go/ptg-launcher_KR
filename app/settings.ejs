@@ -2,7 +2,7 @@
     <div id="settingsContainerLeft">
         <div id="settingsNavContainer">
             <div id="settingsNavHeader">
-                <span id="settingsNavHeaderText">Settings</span>
+                <span id="settingsNavHeaderText">설정</span>
             </div>
             <div id="settingsNavItemsContainer">
                 <div id="settingsNavItemsContent">
@@ -10,7 +10,7 @@
                     <button class="settingsNavItem" rSc="settingsTabMinecraft">마인크래프트</button>
                     <button class="settingsNavItem" rSc="settingsTabMods">모드</button>
                     <button class="settingsNavItem" rSc="settingsTabJava">자바</button>
-                    <button class="settingsNavItem" rSc="settingsTabLauncher">발사통</button>
+                    <button class="settingsNavItem" rSc="settingsTabLauncher">런처</button>
                     <div class="settingsNavSpacer"></div>
                     <button class="settingsNavItem" rSc="settingsTabAbout">에 대한</button>
                     <button class="settingsNavItem" rSc="settingsTabUpdate" id="settingsNavUpdate">업데이트</button>
@@ -106,8 +106,8 @@
             </div>
             <div class="settingsFieldContainer">
                 <div class="settingsFieldLeft">
-                    <span class="settingsFieldTitle">런처에서 분리된 게임 프로세스를 시작합니다.</span>
-                    <span class="settingsFieldDesc">게임이 분리되지 않은 경우 런처를 닫으면 게임도 종료됩니다.</span>
+                    <span class="settingsFieldTitle">런처를 닫은 채 게임을 시작합니다</span>
+                    <span class="settingsFieldDesc">런처를 닫으면 게임도 종료됩니다</span>
                 </div>
                 <div class="settingsFieldRight">
                     <label class="toggleSwitch">
@@ -140,7 +140,7 @@
                     </div>
                 </div>
                 <div id="settingsOptModsContainer">
-                    <div class="settingsModsHeader">옵션 모드</div>
+                    <div class="settingsModsHeader">선택적인 모드</div>
                     <div id="settingsOptModsContent">
                         
                     </div>
@@ -169,7 +169,7 @@
         </div>
         <div id="settingsTabJava" class="settingsTab" style="display: none;">
             <div class="settingsTabHeader">
-                <span class="settingsTabHeaderText">자바 설정</span>
+                <span class="settingsTabHeaderText">Java 설정</span>
                 <span class="settingsTabHeaderDesc">Java 구성을 관리합니다(고급).</span>
             </div>
             <div id="settingsMemoryContainer">
@@ -179,7 +179,7 @@
                         <div class="settingsMemoryContentItem">
                             <span class="settingsMemoryHeader">최대 RAM</span>
                             <div class="settingsMemoryActionContainer">
-                                <div id="settingsMaxRAMRange" class="rangeSlider" cValue="맥스램" min="3" max="8" value="3" step="0.5">
+                                <div id="settingsMaxRAMRange" class="rangeSlider" cValue="MaxRAM" min="3" max="8" value="3" step="0.5">
                                     <div class="rangeSliderBar"></div>
                                     <div class="rangeSliderTrack"></div>
                                 </div>
@@ -189,7 +189,7 @@
                         <div class="settingsMemoryContentItem">
                             <span class="settingsMemoryHeader">최소 RAM</span>
                             <div class="settingsMemoryActionContainer">
-                                <div id="settingsMinRAMRange" class="rangeSlider" cValue="최소램" min="3" max="8" value="3" step="0.5">
+                                <div id="settingsMinRAMRange" class="rangeSlider" cValue="MinRAM" min="3" max="8" value="3" step="0.5">
                                     <div class="rangeSliderBar"></div>
                                     <div class="rangeSliderTrack"></div>
                                 </div>
@@ -201,7 +201,7 @@
                     <div id="settingsMemoryContentRight">
                         <div id="settingsMemoryStatus">
                             <div class="settingsMemoryStatusContainer">
-                                <span class="settingsMemoryStatusTitle">총</span>
+                                <span class="settingsMemoryStatusTitle">합계</span>
                                 <span id="settingsMemoryTotal" class="settingsMemoryStatusValue">16G</span>
                             </div>
                             <div class="settingsMemoryStatusContainer">
@@ -213,7 +213,7 @@
                 </div>
             </div>
             <div class="settingsFileSelContainer">
-                <div class="settingsFileSelTitle">자바 실행 파일</div>
+                <div class="settingsFileSelTitle">Java 실행 파일</div>
                 <div class="settingsFileSelContent">
                     <div id="settingsJavaExecDetails">선택됨: Java 8 업데이트 172(x64)</div>
                     <div class="settingsFileSelActions">
@@ -235,7 +235,7 @@
                         <button class="settingsFileSelButton" id="settingsJavaExecSel" dialogTitle="Select Java Executable" dialogDirectory="false">Choose File</button>
                     </div>
                 </div>
-                <div class="settingsFileSelDesc">Java 실행 파일은 게임 실행 전에 유효성이 검사됩니다. <strong>자바 8 x64가 필요합니다.</strong><br>경로는 다음으로 끝나야 합니다 <strong>bin<%= process.platform === 'win32' ? '\\javaw.exe' : '/java' %></strong>.</div>
+                <div class="settingsFileSelDesc">Java 실행 파일은 게임 실행 전에 유효성이 검사됩니다. <strong>Java 8 x64가 필요합니다.</strong><br>경로는 다음으로 끝나야 합니다 <strong>bin<%= process.platform === 'win32' ? '\\javaw.exe' : '/java' %></strong>.</div>
             </div>
             <div id="settingsJVMOptsContainer">
                 <div id="settingsJVMOptsTitle">추가 JVM 옵션</div>
@@ -256,7 +256,7 @@
                     </div>
                     <input id="settingsJVMOptsVal" cValue="JVMOptions" type="text">
                 </div>
-                <div id="settingsJVMOptsDesc">런타임 시 JVM에 제공할 옵션입니다. <em>-Xms</em> and <em>-Xmx</em> 포함하지 않아야 합니다.<br><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/<%= process.platform === 'win32' ? 'windows' : 'unix' %>/java.html">Java 8에 사용 가능한 옵션</a>.</div>
+                <div id="settingsJVMOptsDesc">런타임 시 JVM에 제공할 옵션입니다. <em>-Xms</em> 과 <em>-Xmx</em> 포함하지 않아야 합니다.<br><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/<%= process.platform === 'win32' ? 'windows' : 'unix' %>/java.html">Java 8에 사용 가능한 옵션</a>.</div>
             </div>
         </div>
         <div id="settingsTabLauncher" class="settingsTab" style="display: none;">
@@ -305,7 +305,7 @@
                 <div id="settingsAboutCurrentContent">
                     <div id="settingsAboutCurrentHeadline">
                         <img id="settingsAboutLogo" src="./assets/images/SealCircle.png">
-                        <span id="settingsAboutTitle">Pixelmon-To-Go 실행기</span>
+                        <span id="settingsAboutTitle">Pixelmon-To-Go 런처</span>
                     </div>
                     <div id="settingsAboutCurrentVersion">
                         <div id="settingsAboutCurrentVersionCheck">&#10003;</div>
@@ -373,7 +373,7 @@
                         <div class="settingsChangelogTitle">릴리스 정보 업데이트</div>
                     </div>
                     <div class="settingsChangelogText">
-                        No Release Notes
+                        릴리스 노트 없음
                     </div>
                 </div>
             </div>
