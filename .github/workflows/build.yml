@@ -37,8 +37,9 @@ jobs:
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
         with:
-          GH_TOKEN: ${{ secrets.github_token }}
+          github_token: ${{ secrets.github_token }}
           mac_certs: ${{ secrets.mac_osx_cert }}
           mac_certs_password: ${{ secrets.mac_osx_cert_password }}
+        env:
           API_KEY_ID: ${{ secrets.api_key_id }}
           API_KEY_ISSUER_ID: ${{ secrets.api_key_issuer_id }}
