@@ -24,6 +24,7 @@
     "async": "^3.2.4",
     "auto-launch": "^5.0.5",
     "discord-rpc-patch": "^4.0.1",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "ejs-electron": "^2.1.1",
     "electron-updater": "^5.2.3",
@@ -39,7 +40,7 @@
     "winreg": "^1.2.4"
   },
   "build:": {
-    "afterSign": "electron-builder-notarize",
+    "afterSign": "./build/afterSignHook.js",
     "mac": {
       "hardenedRuntime": true,
       "entitlements": "./build/entitlements.mac.plist"
