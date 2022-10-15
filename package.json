@@ -1,6 +1,6 @@
 {
   "name": "ptg-launcher",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "productName": "Pixelmon-To-Go Launcher",
   "description": "Modded Minecraft Launcher",
   "author": "John Siegel",
@@ -41,7 +41,8 @@
   "build:": {
     "afterSign": "electron-builder-notarize",
     "mac": {
-      "hardenedRuntime": true
+      "hardenedRuntime": true,
+      "entitlements": "./build/entitlements.mac.plist"
     }
   },
   "devDependencies": {
