@@ -1,4 +1,5 @@
 appId: "pixelmontogolauncher"
+afterSign: "scripts/afterSignHook.js"
 productName: "Pixelmon-To-Go Launcher"
 artifactName: "${productName}-setup-${version}.${ext}"
 
@@ -35,6 +36,10 @@ mac:
         - "arm64"
   artifactName: "${productName}-setup-${version}-${arch}.${ext}"
   category: "public.app-category.games"
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlementsInherit: "build/entitlements.mac.plist"
+  entitlements: "build/entitlements.mac.plist"
 
 # Linux Configuration
 linux:
