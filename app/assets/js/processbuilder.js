@@ -396,7 +396,7 @@ class ProcessBuilder {
 
     // Java Arguments
     if (process.platform === "darwin") {
-      args.push("-Xdock:name=pixelmontogolauncher");
+      args.push("-Xdock:name=pixelmontogolauncher-kr");
       args.push(
         "-Xdock:icon=" + path.join(__dirname, "..", "images", "minecraft.icns")
       );
@@ -435,7 +435,7 @@ class ProcessBuilder {
 
     // Java Arguments
     if (process.platform === "darwin") {
-      args.push("-Xdock:name=PixelmonToGoLauncher");
+      args.push("-Xdock:name=PixelmonToGoLauncher-kr");
       args.push(
         "-Xdock:icon=" + path.join(__dirname, "..", "images", "minecraft.icns")
       );
