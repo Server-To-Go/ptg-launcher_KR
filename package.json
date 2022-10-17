@@ -35,7 +35,7 @@
     "jquery": "^3.6.1",
     "node-stream-zip": "^1.15.0",
     "request": "^2.88.2",
-    "semver": "^7.3.7",
+    "semver": "7.3.8",
     "tar-fs": "^2.1.1",
     "winreg": "^1.2.4"
   },
