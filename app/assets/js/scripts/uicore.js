@@ -68,7 +68,7 @@ if (!isDev) {
         loggerAutoUpdaterSuccess.log("New update available", info.version);
 
         if (process.platform === "darwin") {
-          info.darwindownload = `https://github.com/JohnSiegel/ptg-launcher_KR/releases/download/v${
+          info.darwindownload = `https://github.com/Server-To-Go/ptg-launcher_KR/releases/download/v${
             info.version
           }/Pixelmon-To-Go-Launcher-setup-${info.version}${
             process.arch === "arm64" ? "-arm64" : "-x64"
