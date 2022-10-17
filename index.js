@@ -23,8 +23,8 @@ let autoLaunch = new AutoLaunch({
 autoLaunch.isEnabled().then((isEnabled) => {
     if (!isEnabled) autoLaunch.enable();
 });
-/*          End of AutoLaunch Block  
-
+/*          End of AutoLaunch Block   
+          */
 // Setup auto updater.
 function initAutoUpdater(event, data) {
 

@@ -1,4 +1,4 @@
-appId: "pixelmontogolauncher"
+appId: "pixelmontogolauncher-kr"
 afterSign: "scripts/afterSignHook.js"
 productName: "Pixelmon-To-Go Launcher"
 artifactName: "${productName}-setup-${version}.${ext}"
