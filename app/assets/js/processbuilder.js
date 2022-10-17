@@ -540,7 +540,7 @@ class ProcessBuilder {
               val = args[i].replace(argDiscovery, tempNativePath);
               break;
             case "launcher_name":
-              val = args[i].replace(argDiscovery, "Pixelmon-To-Go-Launcher");
+              val = args[i].replace(argDiscovery, "Pixelmon-To-Go Launcher KR");
               break;
             case "launcher_version":
               val = args[i].replace(argDiscovery, this.launcherVersion);

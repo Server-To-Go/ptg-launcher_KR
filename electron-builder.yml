@@ -1,6 +1,6 @@
 appId: "pixelmontogolauncher-kr"
 afterSign: "scripts/afterSignHook.js"
-productName: "Pixelmon-To-Go Launcher"
+productName: "Pixelmon-To-Go Launcher KR"
 artifactName: "${productName}-setup-${version}.${ext}"
 
 copyright: "Copyright © 2018-2022 Daniel Scalzi"
